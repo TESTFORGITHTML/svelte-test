@@ -2,10 +2,11 @@
 <div class="nav-container">
 <a href="/" class="nav-logo" title="Back to Homepage">Имя Фамилия</a>
 <div class="nav-links">
-<a href="/about" class="link">Обо мнe</a> 
-<a href="/blog" class="link">Блoг</a>
-<a href="/projects" class="link">Портфолио</a> 
-<a href="/contact" class="link">Kонтакты</a>
+    {#each nav as link}
+
+    <a href={link.href} class="link">{link.title}</a>
+    
+    {/each}
 </div>
 </div> 
 </nav>
@@ -21,3 +22,24 @@ max-width: 1400px;
 margin: 50px auto;
 }
 </style>
+
+<script>
+    const nav = [
+    {
+    title: 'Обо мнe',
+    href: '/about'
+    },
+    {
+    title: 'Блoг',
+    href: '/blog'
+    },
+    {
+    title: 'Портфолио',
+    href: '/project'
+    },
+    {
+    title: 'Контакты',
+    href: '/contact'
+    },
+    ]
+    </script>
