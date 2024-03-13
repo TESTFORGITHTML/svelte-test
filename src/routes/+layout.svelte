@@ -2,11 +2,11 @@
 <div class="nav-container">
 <a href="/" class="nav-logo" title="Back to Homepage">Имя Фамилия</a>
 <div class="nav-links">
-    {#each nav as link}
+{#if link.isShow}
 
-    <a href={link.href} class="link">{link.title}</a>
-    
-    {/each}
+<a href={link.href} class="link">{link.title}</a>
+
+{/if}
 </div>
 </div> 
 </nav>
@@ -27,19 +27,28 @@ margin: 50px auto;
     const nav = [
     {
     title: 'Обо мнe',
-    href: '/about'
+    href: '/about',
+    isShow: true,
     },
     {
     title: 'Блoг',
-    href: '/blog'
+    href: '/blog',
+    isShow: true,
     },
     {
     title: 'Портфолио',
-    href: '/project'
+    href: '/project',
+    isShow: true,
     },
     {
     title: 'Контакты',
-    href: '/contact'
+    href: '/contact',
+    isShow: true,
+    },
+    {
+    title: 'temp',
+    href: '/temp',
+    isShow: false,
     },
     ]
     </script>
